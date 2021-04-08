@@ -36,6 +36,10 @@
 #endif
 
 #ifdef _WIN32
+#include <winapifamily.h>
+#endif
+
+#if defined(_WIN32) && WINAPI_FAMILY_PARTITION(WINAPI_FAMILY_DESKTOP)
 
 #include <websocketpp/common/string_utils.hpp>
 #include <websocketpp/base64/base64.hpp>
