@@ -37,7 +37,6 @@
 
 #ifdef _WIN32
 #include <winapifamily.h>
-#endif
 
 #if defined(_WIN32) && WINAPI_FAMILY_PARTITION(WINAPI_FAMILY_DESKTOP)
 
@@ -203,6 +202,8 @@ private:
 }       // security
 }           // lib
 }               // websocket
+
+#endif //WINAPI_FAMILY_PARTITION
 
 #elif defined(__APPLE__) && TARGET_OS_OSX // _WIN32
 
