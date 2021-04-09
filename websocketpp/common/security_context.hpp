@@ -209,8 +209,6 @@ private:
 }           // lib
 }               // websocket
 
-#endif //WINAPI_FAMILY_PARTITION
-
 #elif defined(__APPLE__) && TARGET_OS_OSX // _UWP
 
 #include <GSS/GSS.h> // the library that lets us request kerberos tokens - https://tools.ietf.org/html/rfc2744
@@ -325,7 +323,7 @@ private:
 }       // lib
 }       // websocket
 
-#else //_WIN32
+#else //_UWP
 
 namespace websocketpp {
 namespace lib {
@@ -347,5 +345,5 @@ public:
 }       // websocket
 
 
-#endif //_WIN32
+#endif //_UWP
 #endif // WEBSOCKETPP_COMMON_SECURITY_CONTEXT_HPP
